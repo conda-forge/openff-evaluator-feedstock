@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1119a2d18cf092dc981beaff1226b821f7ef32ed5a16117d5f1cd32badc9c363
+  sha256: e8f2455b6b7d21eecb986ff7d35d719b6c11bbe0a4939a96e588565d73d306de
 
 build:
   noarch: python
