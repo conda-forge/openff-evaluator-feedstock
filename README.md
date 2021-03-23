@@ -5,7 +5,7 @@ Home: https://github.com/openforcefield/openff-evaluator
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-evaluator-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-evaluator-feedstock-1-feedstock/blob/master/LICENSE.txt)
 
 Summary: A physical property evaluation toolkit from the Open Forcefield Consortium.
 
@@ -22,8 +22,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12190&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openff-evaluator-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openff-evaluator-feedstock-1-feedstock?branchName=master">
       </a>
     </td>
   </tr>
