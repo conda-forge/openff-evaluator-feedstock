@@ -41,9 +41,13 @@ outputs:
         - pyyaml
         - requests
         - rdkit
-        - cmiles
+        - cmiles-base
         - python-dateutil
         - pydantic
+
+    test:
+      imports:
+        - openff.evaluator
 
   - name: {{ name|lower }}
     build:
