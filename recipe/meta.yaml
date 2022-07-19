@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.3.11" %}
+{% set version = "0.4.0rc1" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: bad05e7460286548ea1f38c1da9b01ea8b030fe5f67a4699ce75302cead267dc
+  sha256: 7038f2f65ca764d11588298522aa9443691374e3b898332549c03143a2c783d6
 
 build:
   number: 0
@@ -20,17 +20,14 @@ outputs:
 
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
         - pip
       run:
-        - python >=3.6
-        - openff-toolkit-base >=0.10.6
-        - openff-units >=0.1.4
-        - numpy
+        - python >=3.8
+        - openff-toolkit-base =>0.11.0rc2
         - pandas
-        - openmm
+        - openmm >=7.6
         - networkx
-        - pint
         - packmol
         - pymbar >=3.0.5
         - mdtraj >=1.9.3
@@ -42,9 +39,9 @@ outputs:
         - pyyaml
         - requests
         - rdkit
-        - cmiles-base
         - python-dateutil
-        - pydantic
+        - pydantic <2.0.0a0
+
 
     test:
       imports:
@@ -56,10 +53,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
         - pip
       run:
-        - python >=3.6
+        - python >=3.8
         - yank >=0.25.2
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
 
@@ -81,3 +78,4 @@ about:
 extra:
   recipe-maintainers:
     - simonboothroyd
+    - mattwthompson
