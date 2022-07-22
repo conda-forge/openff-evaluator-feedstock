@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.0rc1" %}
+{% set version = "0.4.0rc2" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7038f2f65ca764d11588298522aa9443691374e3b898332549c03143a2c783d6
+  sha256: f817390ad474edc7113839dbff6280e9cd4eff18e2fedbebb7381ef16847b9a0
 
 build:
   number: 0
@@ -29,7 +29,7 @@ outputs:
         - openmm >=7.6
         - networkx
         - packmol
-        - pymbar >=3.0.5
+        - pymbar >=4.0.0
         - mdtraj >=1.9.3
         - dask >=2.7.0
         - distributed >=2.7.0
