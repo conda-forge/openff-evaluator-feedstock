@@ -20,11 +20,13 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.6
         - pip
       run:
-        - python >=3.8
+        - python >=3.6
         - openff-toolkit-base >=0.10.6,<0.11
+        - openff-units >=0.1.4
+        - numpy
         - pandas
         - openmm >=7.6
         - networkx
@@ -39,6 +41,7 @@ outputs:
         - pyyaml
         - requests
         - rdkit
+        - cmiles-base
         - python-dateutil
         - pydantic <2.0.0a0
 
@@ -53,10 +56,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.8
+        - python >=3.6
         - pip
       run:
-        - python >=3.8
+        - python >=3.6
         - yank >=0.25.2
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
 
