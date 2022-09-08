@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.0rc2" %}
+{% set version = "0.4.0rc3" %}
 
 package:
   name: {{ name }}-split
@@ -24,7 +24,7 @@ outputs:
         - pip
       run:
         - python >=3.8
-        - openff-toolkit-base =>0.11.0rc2
+        - openff-toolkit-base =>0.11.0
         - pandas
         - openmm >=7.6
         - networkx
@@ -33,7 +33,7 @@ outputs:
         - mdtraj >=1.9.3
         - dask >=2.7.0
         - distributed >=2.7.0
-        - dask-jobqueue >=0.7.0
+        - dask-jobqueue >=0.8.0
         - uncertainties
         - openmmtools
         - pyyaml
