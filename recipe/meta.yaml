@@ -30,7 +30,8 @@ outputs:
         - networkx
         - packmol
         - pymbar >=4.0.0
-        - mdtraj =>1.9.3,<=1.9.4
+        # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
+        - mdtraj >=1.9.3,<=1.9.4
         - dask >=2.7.0
         - distributed >=2.7.0
         - dask-jobqueue >=0.8.0
