@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.0rc4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9855df6bc82023112e8142ef68141a3ff95e090e9049a5ad627f374529b43d61
+  sha256: 9ac131c34eeeb475a7d3572f0012c56b321e18fc6072fbc638a2ce1bdcf9a6b9
 
 build:
   number: 0
@@ -29,8 +29,9 @@ outputs:
         - openmm >=7.6
         - networkx
         - packmol
-        - pymbar <4.0.0
-        - mdtraj >=1.9.3
+        - pymbar >=4.0.0
+        # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
+        - mdtraj >=1.9.3,<=1.9.4
         - dask >=2.7.0
         - distributed >=2.7.0
         - dask-jobqueue >=0.8.0
@@ -39,7 +40,6 @@ outputs:
         - pyyaml
         - requests
         - rdkit
-        - cmiles-base
         - python-dateutil
         - pydantic <2.0.0a0
 
