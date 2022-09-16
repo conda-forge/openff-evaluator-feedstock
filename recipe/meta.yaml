@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.0rc4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name }}-split
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9855df6bc82023112e8142ef68141a3ff95e090e9049a5ad627f374529b43d61
+  sha256: 9ac131c34eeeb475a7d3572f0012c56b321e18fc6072fbc638a2ce1bdcf9a6b9
 
 build:
   number: 0
-  
+
 outputs:
   - name: {{ name|lower }}-base
     script: build_base.sh
