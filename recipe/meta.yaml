@@ -59,6 +59,7 @@ outputs:
       run:
         - python >=3.8
         - yank >=0.25.2
+        - mdtraj >=1.9.3,<=1.9.4
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
 
     test:
