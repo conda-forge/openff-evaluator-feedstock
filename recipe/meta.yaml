@@ -10,7 +10,7 @@ source:
   sha256: 9ac131c34eeeb475a7d3572f0012c56b321e18fc6072fbc638a2ce1bdcf9a6b9
 
 build:
-  number: 0
+  number: 1
   
 outputs:
   - name: {{ name|lower }}-base
@@ -31,7 +31,7 @@ outputs:
         - packmol
         - pymbar >=4.0.0
         # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
-        - mdtraj !=1.9.6
+        - mdtraj !=1.9.5
         - dask >=2.7.0
         - distributed >=2.7.0
         - dask-jobqueue >=0.8.0
