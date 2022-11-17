@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9ac131c34eeeb475a7d3572f0012c56b321e18fc6072fbc638a2ce1bdcf9a6b9
+  sha256: b45ea99f663f23e96c4894dd0b3933484c9dd91cd615a0ce582e449d241ac048
 
 build:
-  number: 0
+  number: 1
   
 outputs:
   - name: {{ name|lower }}-base
@@ -31,7 +31,7 @@ outputs:
         - packmol
         - pymbar >=4.0.0
         # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
-        - mdtraj >=1.9.3,<=1.9.4
+        - mdtraj !=1.9.5
         - dask >=2.7.0
         - distributed >=2.7.0
         - dask-jobqueue >=0.8.0
@@ -59,6 +59,7 @@ outputs:
       run:
         - python >=3.8
         - yank >=0.25.2
+        - mdtraj >=1.9.3,<=1.9.4
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
 
     test:
