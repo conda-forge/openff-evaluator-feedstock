@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  
+
 outputs:
   - name: {{ name|lower }}-base
     script: build_base.sh
