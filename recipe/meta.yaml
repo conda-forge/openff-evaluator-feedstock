@@ -10,8 +10,8 @@ source:
   sha256: c870d6b458967152d0ebd370a04909a61317072e5fa90399b17b11685409bf5c
 
 build:
-  number: 0
-  
+  number: 1
+
 outputs:
   - name: {{ name|lower }}-base
     script: build_base.sh
