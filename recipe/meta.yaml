@@ -42,7 +42,8 @@ outputs:
         - rdkit
         - python-dateutil
         - pydantic <2.0.0a0
-
+      run_constrained:
+        - forcebalance >=1.9.5
 
     test:
       imports:
