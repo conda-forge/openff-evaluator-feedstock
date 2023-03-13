@@ -10,7 +10,7 @@ source:
   sha256: c66217e648fae3268a645ddc96ba88b6e031557caacf75ad598b5ab193125952
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: {{ name|lower }}-base
@@ -44,6 +44,9 @@ outputs:
         - pydantic <2.0.0a0
       run_constrained:
         - forcebalance >=1.9.5
+        # https://github.com/conda-forge/pymbar-feedstock/issues/30
+        - jax >=0.3
+        - jaxlib >=0.3
 
     test:
       imports:
