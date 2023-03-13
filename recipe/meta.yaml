@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name }}-split
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c66217e648fae3268a645ddc96ba88b6e031557caacf75ad598b5ab193125952
+  sha256: 2fed75f718c02c800d3c9ea1fab9adac9ef49826189319fbeaa2ef161678210a
 
 build:
-  number: 3
+  number: 0
 
 outputs:
   - name: {{ name|lower }}-base
@@ -26,7 +26,7 @@ outputs:
         - python >=3.8
         - openff-toolkit-base =>0.11.0
         - pandas
-        - openmm >=7.6,<8
+        - openmm >=7.6
         - networkx
         - packmol
         - pymbar
