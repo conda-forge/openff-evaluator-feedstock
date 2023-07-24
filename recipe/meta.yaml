@@ -70,6 +70,8 @@ outputs:
     test:
       imports:
         - openff.evaluator
+        - openff.evaluator.forcefield
+        - openff.evaluator.properties
 
 about:
   home: https://github.com/openforcefield/openff-evaluator
