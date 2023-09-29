@@ -10,7 +10,7 @@ source:
   sha256: 0f1a4ee739140331248fdd438d104613d0e2458367d6d1786cb4f2aebac530d3
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
@@ -64,7 +64,6 @@ outputs:
         - pip
       run:
         - python >=3.9
-        - mdtraj >=1.9.3,<=1.9.4
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
         - foyer
 
