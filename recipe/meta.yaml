@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.8" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6471d4c2ab4aeb329cc70e7e77e4e4b946d6e6f61fec85f97976d8bbae646caf
+  sha256: 9ac3bd4b12164e916bb1a3c4228092bcd061ec81317831b03c117b902f2de323
 
 build:
   number: 0
@@ -20,12 +20,12 @@ outputs:
 
     requirements:
       host:
-        - python <3.12
+        - python <3.13
         - pip
       run:
-        - python >=3.9,<3.12
+        - python >=3.9,<3.13
         - openff-toolkit-base =>0.11.0
-        - openff-interchange-base
+        - openff-interchange-base >=0.3.18
         - pandas =1
         - openmm >=7.6,<9
         - networkx
@@ -43,7 +43,7 @@ outputs:
         - requests
         - rdkit
         - python-dateutil
-        - pydantic =1
+        - pydantic
       run_constrained:
         - pint =0.20.1
         - forcebalance >=1.9.5
