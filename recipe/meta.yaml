@@ -45,7 +45,6 @@ outputs:
         - python-dateutil
         - pydantic
       run_constrained:
-        - pint =0.20.1
         - forcebalance >=1.9.5
         # https://github.com/conda-forge/pymbar-feedstock/issues/30
         - jax >=0.3
