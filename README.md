@@ -40,14 +40,14 @@ Current release info
 Installing openff-evaluator-split
 =================================
 
-Installing `openff-evaluator-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `openff-evaluator-split` from the `conda-forge/label/openff-evaluator_dev` channel can be achieved by adding `conda-forge/label/openff-evaluator_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/openff-evaluator_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `openff-evaluator, openff-evaluator-base` can be installed with `conda`:
+Once the `conda-forge/label/openff-evaluator_dev` channel has been enabled, `openff-evaluator, openff-evaluator-base` can be installed with `conda`:
 
 ```
 conda install openff-evaluator openff-evaluator-base
@@ -62,26 +62,26 @@ mamba install openff-evaluator openff-evaluator-base
 It is possible to list all of the versions of `openff-evaluator` available on your platform with `conda`:
 
 ```
-conda search openff-evaluator --channel conda-forge
+conda search openff-evaluator --channel conda-forge/label/openff-evaluator_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search openff-evaluator --channel conda-forge
+mamba search openff-evaluator --channel conda-forge/label/openff-evaluator_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search openff-evaluator --channel conda-forge
+mamba repoquery search openff-evaluator --channel conda-forge/label/openff-evaluator_dev
 
 # List packages depending on `openff-evaluator`:
-mamba repoquery whoneeds openff-evaluator --channel conda-forge
+mamba repoquery whoneeds openff-evaluator --channel conda-forge/label/openff-evaluator_dev
 
 # List dependencies of `openff-evaluator`:
-mamba repoquery depends openff-evaluator --channel conda-forge
+mamba repoquery depends openff-evaluator --channel conda-forge/label/openff-evaluator_dev
 ```
 
 
