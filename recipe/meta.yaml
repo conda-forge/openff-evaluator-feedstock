@@ -50,7 +50,10 @@ outputs:
         - jax >=0.3
         - jaxlib >=0.3
         # re-evaluate if 24 builds are made
-        - ambertools =23.6
+        - ambertools >=22,<24
+        # 23.6 includes packmol in the ambertools package, if users
+        # have older versions installed, they might need to install
+        # packmol (the standalone conda-forge package) themselves
 
     test:
       imports:
