@@ -10,7 +10,7 @@ source:
   sha256: 9ac3bd4b12164e916bb1a3c4228092bcd061ec81317831b03c117b902f2de323
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
@@ -25,11 +25,10 @@ outputs:
       run:
         - python >=3.9,<3.13
         - openff-toolkit-base =>0.11.0
-        - openff-interchange-base >=0.3.18
+        - openff-interchange-base ~=0.3.18
         - pandas =1
         - openmm >=7.6,<9
         - networkx
-        - packmol
         - pymbar
         # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
         - mdtraj !=1.9.5
@@ -50,6 +49,8 @@ outputs:
         # https://github.com/conda-forge/pymbar-feedstock/issues/30
         - jax >=0.3
         - jaxlib >=0.3
+        # re-evaluate if 24 builds are made
+        - ambertools =23.6
 
     test:
       imports:
