@@ -25,7 +25,7 @@ outputs:
       run:
         - python >=3.10,<3.13
         - openff-toolkit-base =>0.11.0
-        - openff-interchange-base >=0.3.18
+        - openff-interchange-base ~=0.3.18
         - pandas =1
         - openmm >=7.6,<9
         - networkx
@@ -49,10 +49,19 @@ outputs:
         # https://github.com/conda-forge/pymbar-feedstock/issues/30
         - jax >=0.3
         - jaxlib >=0.3
+        # re-evaluate if 24 builds are made
+        - ambertools >=22,<24
+        # 23.6 includes packmol in the ambertools package, if users
+        # have older versions installed, they might need to install
+        # packmol (the standalone conda-forge package) themselves
 
     test:
       imports:
         - openff.evaluator
+      files:
+        - test.py
+      commands:
+        - python test.py
 
   - name: {{ name|lower }}
     build:
