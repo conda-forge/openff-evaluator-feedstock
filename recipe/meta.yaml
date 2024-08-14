@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.8" %}
+{% set version = "0.4.9" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9ac3bd4b12164e916bb1a3c4228092bcd061ec81317831b03c117b902f2de323
+  sha256: 04d549f38b0099b979867e506411c31bf2be2b45796bd0ec0929a460a286511a
 
 build:
   number: 0
@@ -23,13 +23,12 @@ outputs:
         - python <3.13
         - pip
       run:
-        - python >=3.9,<3.13
+        - python >=3.10,<3.13
         - openff-toolkit-base =>0.11.0
         - openff-interchange-base >=0.3.18
         - pandas =1
         - openmm >=7.6,<9
         - networkx
-        - packmol
         - pymbar
         # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
         - mdtraj !=1.9.5
@@ -45,7 +44,7 @@ outputs:
         - python-dateutil
         - pydantic
       run_constrained:
-        - pint =0.20.1
+        - pint >0.21,<0.24
         - forcebalance >=1.9.5
         # https://github.com/conda-forge/pymbar-feedstock/issues/30
         - jax >=0.3
@@ -61,10 +60,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python >=3.10
         - pip
       run:
-        - python >=3.9
+        - python >=3.10
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
         - foyer
 
