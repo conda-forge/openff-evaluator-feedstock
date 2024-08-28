@@ -10,7 +10,7 @@ source:
   sha256: 04d549f38b0099b979867e506411c31bf2be2b45796bd0ec0929a460a286511a
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
