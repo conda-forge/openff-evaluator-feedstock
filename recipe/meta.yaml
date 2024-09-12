@@ -61,7 +61,7 @@ outputs:
 
     test:
       requires:
-        - ambertools =23.6
+        - ambertools
       imports:
         - openff.evaluator
       files:
