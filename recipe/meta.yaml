@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.4.9" %}
+{% set version = "0.4.10" %}
 
 package:
   name: {{ name }}-split
@@ -10,7 +10,7 @@ source:
   sha256: 5c195b16923ecde50db33a3cb9b1b9b2ebd051f22ae1d9f6772a2ec187ec7088
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - name: {{ name|lower }}-base
@@ -105,3 +105,4 @@ extra:
     - simonboothroyd
     - mattwthompson
     - j-wags
+    - lilyminium
