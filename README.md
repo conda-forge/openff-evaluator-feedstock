@@ -152,6 +152,7 @@ Feedstock Maintainers
 =====================
 
 * [@j-wags](https://github.com/j-wags/)
+* [@lilyminium](https://github.com/lilyminium/)
 * [@mattwthompson](https://github.com/mattwthompson/)
 * [@simonboothroyd](https://github.com/simonboothroyd/)
 
