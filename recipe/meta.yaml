@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b939f70dc9a36bc52684a2b92dbc4c7451271ececd0aa0b80d493db9f90a8864
+  sha256: 22361cbac9e59696c439f3f8cf1cb4b32a4e7e2d0f2bcac6bc78929c8054de04
 
 build:
-  number: 0
+  number: 2
 
 outputs:
   - name: {{ name|lower }}-base
@@ -20,11 +20,11 @@ outputs:
 
     requirements:
       host:
-        - python <3.13
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python >=3.10,<3.13
+        - python >={{ python_min }},<3.13
         - openff-toolkit-base >=0.11.0
         - openff-interchange-base ~=0.3.18
         - pandas =1
@@ -62,6 +62,7 @@ outputs:
     test:
       requires:
         - ambertools
+        - python {{ python_min }}
       imports:
         - openff.evaluator
       files:
@@ -75,15 +76,17 @@ outputs:
 
     requirements:
       host:
-        - python >=3.10
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python >=3.10
+        - python >={{ python_min }}
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
         - foyer
 
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - openff.evaluator
         - openff.evaluator.forcefield
