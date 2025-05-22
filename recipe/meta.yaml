@@ -10,7 +10,7 @@ source:
   sha256: af07951aea711d8289de464b41c144c3b15da95c04336cb98d339b0e50d3cc21
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
@@ -26,7 +26,7 @@ outputs:
       run:
         - python >={{ python_min }},<3.13
         - openff-toolkit-base >=0.11.0
-        - openff-interchange-base ~=0.3.18
+        - openff-interchange-base =0.4
         - pandas =1
         - openmm >=7.6,<9
         - networkx
