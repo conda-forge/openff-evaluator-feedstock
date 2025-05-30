@@ -28,7 +28,7 @@ outputs:
         - openff-toolkit-base >=0.11.0
         - openff-interchange-base ~=0.3.18
         - pandas =1
-        - openmm >=8.0,<9
+        - openmm >=8.1.1,<9
         - networkx
         - pymbar
         # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
