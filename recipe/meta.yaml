@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name }}-split
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 678f06c3370f825e4310d06b7cfe99b80b7d13b351763c47df8142b726709978
+  sha256: f8488b8ba8a5435d87b5e8ff60061cc5ed61d9a53fd6d69db560257d94326a94
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - name: {{ name|lower }}-base
@@ -27,15 +27,15 @@ outputs:
         - python >={{ python_min }},<3.13
         - openff-toolkit-base >=0.11.0
         - openff-interchange-base ~=0.3.18
-        - pandas =1
+        - pandas =2
         - openmm >=8.1.1,<9
         - networkx
         - pymbar
         # https://github.com/openforcefield/openff-evaluator/issues/470#issuecomment-1248878110
         - mdtraj !=1.9.5
-        - dask >=2.7.0
-        - distributed >=2.7.0
-        - dask-jobqueue >=0.8.0
+        - dask >=2024.12.1
+        - distributed
+        - dask-jobqueue
         - uncertainties
         # https://github.com/openforcefield/openff-evaluator/compare/v0.4.3...c6fb94346d0b8110089f644033e93ade7023e4e5#diff-1fbd3f1fb4002bd59bde4c5b1501a1ac0a580dd70b9bcf05cfb35ef066e4b0f9
         - openmmtools
