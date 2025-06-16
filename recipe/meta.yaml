@@ -10,7 +10,7 @@ source:
   sha256: f8488b8ba8a5435d87b5e8ff60061cc5ed61d9a53fd6d69db560257d94326a94
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name|lower }}-base
@@ -26,7 +26,7 @@ outputs:
       run:
         - python >={{ python_min }},<3.13
         - openff-toolkit-base >=0.11.0
-        - openff-interchange-base ~=0.3.18
+        - openff-interchange-base >=0.3.18,<0.5
         - pandas =2
         - openmm >=8.1.1,<9
         - networkx
@@ -51,7 +51,7 @@ outputs:
         # when version 24 and newer will be online in conda-forge
         - packmol
       run_constrained:
-        - pint >0.21,<0.24
+        - pint >0.21,<0.25
         - forcebalance >=1.9.5
         # https://github.com/conda-forge/pymbar-feedstock/issues/30
         - jax >=0.3
