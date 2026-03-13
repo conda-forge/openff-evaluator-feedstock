@@ -1,5 +1,5 @@
 {% set name = "openff-evaluator" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 75f8222ac1e4bb581d2a48a9b31f12fdfaaf9c9adc2608bba0e0d527640f2235
+  sha256: 810565ea84ce1c13af2627ec35717e401ba150132827a53fdb0c4818486ae1d7
 
 build:
   number: 0
@@ -23,10 +23,11 @@ outputs:
         - python {{ python_min }}
         - pip
         - setuptools
+        - setuptools_scm
       run:
         - python >={{ python_min }},<3.13
-        - openff-toolkit-base >=0.11.0
-        - openff-interchange-base >=0.3.18,<0.5
+        - openff-toolkit-base >=0.17.0
+        - openff-interchange-base >=0.4,<0.6
         - pandas =2
         - openmm >=8.1.1,<9
         - networkx
@@ -51,7 +52,7 @@ outputs:
         # when version 24 and newer will be online in conda-forge
         - packmol
       run_constrained:
-        - pint >0.21,<0.25
+        - pint >0.21,<0.26
         - forcebalance >=1.9.5
         # https://github.com/conda-forge/pymbar-feedstock/issues/30
         - jax >=0.3
@@ -79,6 +80,7 @@ outputs:
         - python {{ python_min }}
         - pip
         - setuptools
+        - setuptools_scm
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('openff-evaluator-base', exact=True) }}
